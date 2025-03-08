@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Complexity Analysis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Complexity Analysis &amp; Big-O Notation</h1>
+        <p>Understanding how algorithms scale in terms of time and space.</p>
+
+        <h2>Time Complexity</h2>
+        <p>Time complexity describes how the runtime of an algorithm increases with input size.</p>
+        <ul>
+            <li><strong>O(1) - Constant Time:</strong> Execution time does not change with input size.</li>
+            <li><strong>O(n) - Linear Time:</strong> Execution time grows proportionally with input size.</li>
+            <li><strong>O(log n) - Logarithmic Time:</strong> Execution time grows slowly as input increases.</li>
+            <li><strong>O(n²) - Quadratic Time:</strong> Execution time grows exponentially with input size.</li>
+            <li><strong>O(2ⁿ) - Exponential Time:</strong> Growth doubles with each addition to input size.</li>
+            <li><strong>O(n log n) - Linearithmic Time:</strong> Execution time grows faster than linear time but slower
+                than quadratic.</li>
+            <li><strong>O(n!) - Factorial Time:</strong> Execution time grows extremely fast, making it impractical for
+                large inputs.</li>
+
+        </ul>
+
+        <h2>Best, Worst &amp; Average Case Complexity</h2>
+        <p>Algorithm performance can vary depending on input characteristics. The three common cases are:</p>
+        <ul>
+            <li><strong>Best Case:</strong> The input is in the most favorable condition, resulting in the fastest
+                execution time.</li>
+            <li><strong>Worst Case:</strong> The input is in the least favorable condition, leading to the slowest
+                execution time.</li>
+            <li><strong>Average Case:</strong> The expected time complexity over all possible inputs.</li>
+        </ul>
+
+        <h2>Space Complexity</h2>
+        <p>Space complexity refers to the amount of memory required by an algorithm to run.</p>
+        <ul>
+            <li><strong>O(1) - Constant Space:</strong> Uses a fixed amount of memory.</li>
+            <li><strong>O(n) - Linear Space:</strong> Uses memory proportional to input size.</li>
+            <li><strong>O(log n) - Logarithmic Space:</strong> Uses memory that grows slowly as input size increases.
+            </li>
+            <li><strong>O(n²) - Quadratic Space:</strong> Memory usage grows quadratically with input size, common in
+                algorithms using 2D arrays.</li>
+
+        </ul>
+
+        <h2>Example Algorithm Complexities</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Algorithm</th>
+                    <th>Time Complexity</th>
+                    <th>Space Complexity</th>
+                </tr>
+                <tr>
+                    <td>Linear Search</td>
+                    <td>O(n)</td>
+                    <td>O(1)</td>
+                </tr>
+                <tr>
+                    <td>Binary Search</td>
+                    <td>O(log n)</td>
+                    <td>O(1)</td>
+                </tr>
+                <tr>
+                    <td>Bubble Sort</td>
+                    <td>O(n²)</td>
+                    <td>O(1)</td>
+                </tr>
+
+                <tr>
+                    <td>Merge Sort</td>
+                    <td>O(n log n)</td>
+                    <td>O(n)</td>
+                </tr>
+                <tr>
+                    <td><a href="fibonacci.html">Fibonacci (Recursive)</a></td>
+                    <td>O(2ⁿ)</td>
+                    <td>O(n)</td>
+                </tr>
+
+
+                <tr>
+                    <td>Travelling Salesman (Brute Force)</td>
+                    <td>O(n!)</td>
+                    <td>O(n)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Real-World Applications of Complexity</h2>
+        <p>Big-O notation is widely used in real-world applications:</p>
+        <ul>
+            <li><strong>O(1) - Constant Time:</strong> Accessing an element in an array by its index.</li>
+            <li><strong>O(log n) - Logarithmic Time:</strong> Binary search in a sorted database (e.g., searching a name
+                in a phonebook).</li>
+            <li><strong>O(n) - Linear Time:</strong> Scanning a hard drive for a specific file.</li>
+            <li><strong>O(n log n) - Linearithmic Time:</strong> Sorting search results in Google.</li>
+            <li><strong>O(n!) - Factorial Time:</strong> Optimizing routes for delivery trucks (Traveling Salesman
+                Problem).</li>
+        </ul>
+
+        <img src="images/chart.png"><br>
+
+        <img style="margin-top: 30px;" src="images/rickroll.gif">
+    </div>
+</body>
+
+</html>
