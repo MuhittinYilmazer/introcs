@@ -12,32 +12,51 @@
         <h1>Complexity Analysis &amp; Big-O Notation</h1>
         <p>Understanding how algorithms scale in terms of time and space.</p>
 
-        <h2>Time Complexity</h2>
+        <hr><h2>Big O Notation</h2>
+<p class="note"><strong>Note:</strong> This content focuses on worst-case complexity of algorithms. Average and best-case complexities may differ for some algorithms.</p>
+
+        <p>Big O notation is a mathematical notation used in computer science to describe the performance or complexity of an algorithm. It specifically describes the worst-case scenario and can be used to describe both time complexity (how runtime increases with input size) and space complexity (how memory usage increases with input size).</p>
+        
+        <h3>Definition</h3>
+        <p>Big O notation is expressed as O(f(n)), where f(n) is a function of the input size n. It provides an upper bound on the growth rate of an algorithm's resource usage, ignoring constants and lower-order terms.</p>
+        
+        <h3>Key Characteristics</h3>
+        <ul>
+            <li><strong>Upper Bound:</strong> Big O provides the upper limit on growth rate, not the exact performance.</li>
+            <li><strong>Asymptotic Analysis:</strong> It focuses on the behavior of algorithms for very large inputs.</li>
+            <li><strong>Simplification:</strong> Constants and lower-order terms are dropped (e.g., O(2n) becomes O(n)).</li>
+        </ul>
+        
+        <h3>Limitations</h3>
+        <ul>
+            <li>Only provides an upper bound (worst-case scenario)</li>
+            <li>Doesn't capture the full performance profile of an algorithm</li>
+            <li>May be overly pessimistic for algorithms that rarely hit their worst case</li>
+        </ul>
+        
+        <h3>Comparison with Other Notations</h3>
+        <ul>
+            <li><strong>Big Omega (Ω):</strong> Provides a lower bound on growth rate</li>
+            <li><strong>Big Theta (Θ):</strong> Provides both upper and lower bounds (more precise than Big O)</li>
+        </ul>
+
+        <hr><h2>Time Complexity</h2>
         <p>Time complexity describes how the runtime of an algorithm increases with input size.</p>
         <ul>
             <li><strong>O(1) - Constant Time:</strong> Execution time does not change with input size.</li>
             <li><strong>O(n) - Linear Time:</strong> Execution time grows proportionally with input size.</li>
             <li><strong>O(log n) - Logarithmic Time:</strong> Execution time grows slowly as input increases.</li>
-            <li><strong>O(n²) - Quadratic Time:</strong> Execution time grows exponentially with input size.</li>
+            <li><strong>O(n log n) - Linearithmic Time:</strong> Execution time grows faster than linear time but slower than quadratic.</li>
+
+            <li><strong>O(n²) - Quadratic Time:</strong> Execution time grows quadratically with input size.</li>
             <li><strong>O(2ⁿ) - Exponential Time:</strong> Growth doubles with each addition to input size.</li>
-            <li><strong>O(n log n) - Linearithmic Time:</strong> Execution time grows faster than linear time but slower
-                than quadratic.</li>
+                
             <li><strong>O(n!) - Factorial Time:</strong> Execution time grows extremely fast, making it impractical for
                 large inputs.</li>
 
         </ul>
 
-        <h2>Best, Worst &amp; Average Case Complexity</h2>
-        <p>Algorithm performance can vary depending on input characteristics. The three common cases are:</p>
-        <ul>
-            <li><strong>Best Case:</strong> The input is in the most favorable condition, resulting in the fastest
-                execution time.</li>
-            <li><strong>Worst Case:</strong> The input is in the least favorable condition, leading to the slowest
-                execution time.</li>
-            <li><strong>Average Case:</strong> The expected time complexity over all possible inputs.</li>
-        </ul>
-
-        <h2>Space Complexity</h2>
+        <hr><h2>Space Complexity</h2>
         <p>Space complexity refers to the amount of memory required by an algorithm to run.</p>
         <ul>
             <li><strong>O(1) - Constant Space:</strong> Uses a fixed amount of memory.</li>
@@ -49,7 +68,17 @@
 
         </ul>
 
-        <h2>Example Algorithm Complexities</h2>
+<hr><h2>Best, Worst &amp; Average Case Complexity</h2>
+        <p>Algorithm performance can vary depending on input characteristics. The three common cases are:</p>
+        <ul>
+            <li><strong>Best Case:</strong> The input is in the most favorable condition, resulting in the fastest
+                execution time.</li>
+            <li><strong>Worst Case:</strong> The input is in the least favorable condition, leading to the slowest
+                execution time.</li>
+            <li><strong>Average Case:</strong> The expected time complexity over all possible inputs.</li>
+        </ul>
+
+        <hr><h2>Example Algorithm Complexities</h2>
         <table>
             <tbody>
                 <tr>
@@ -72,12 +101,24 @@
                     <td>O(n²)</td>
                     <td>O(1)</td>
                 </tr>
+	
+		<tr>
+                    <td>Heap Sort</td>
+                    <td>O(n log n)</td>
+                    <td>O(1)</td>
+                </tr>
 
                 <tr>
                     <td>Merge Sort</td>
                     <td>O(n log n)</td>
                     <td>O(n)</td>
                 </tr>
+		<tr>
+                    <td>Quick Sort</td>
+                    <td>O(n²)</td>
+                    <td>O(log n)</td>
+                </tr>
+		
                 <tr>
                     <td><a href="fibonacci.html">Fibonacci (Recursive)</a></td>
                     <td>O(2ⁿ)</td>
@@ -93,19 +134,21 @@
             </tbody>
         </table>
 
-        <h2>Real-World Applications of Complexity</h2>
+        <br><h2>Real-World Applications of Complexity</h2>
         <p>Big-O notation is widely used in real-world applications:</p>
         <ul>
             <li><strong>O(1) - Constant Time:</strong> Accessing an element in an array by its index.</li>
-            <li><strong>O(log n) - Logarithmic Time:</strong> Binary search in a sorted database (e.g., searching a name
-                in a phonebook).</li>
             <li><strong>O(n) - Linear Time:</strong> Scanning a hard drive for a specific file.</li>
+
+            <li><strong>O(log n) - Logarithmic Time:</strong> Binary search in a sorted database (e.g., searching a word
+                in a dictionary).</li>
             <li><strong>O(n log n) - Linearithmic Time:</strong> Sorting search results in Google.</li>
             <li><strong>O(n!) - Factorial Time:</strong> Optimizing routes for delivery trucks (Traveling Salesman
                 Problem).</li>
         </ul>
 
-<div class="chart-container" style="position: relative; height: 400px; max-width: 800px; margin: 0 auto;">
+
+<br><div class="chart-container" style="position: relative; height: 400px; max-width: 800px; margin: 0 auto;">
     <canvas id="complexityChart"></canvas>
 </div>
 
